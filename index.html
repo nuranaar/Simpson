@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metod Simpsona</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300i,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <img id="logoSimpson" src="simpson.png" alt="">
+                <a class="navbar-brand" href="#MetodSimp">Метод Симпсона</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sut">Суть метода</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#formulaSimp">Формула</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#poqrew">Абсолютная погрешность </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#primeri">Примеры</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="metod mt-5">
+            <section id="MetodSimp">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-lg-12">
+                            <div class="title text-center mx-5 mb-3 mt-5">
+                                <h3>
+                                    Метод Симпсона (парабол).
+                                </h3>
+                                <div class="icon">
+                                    <i class="far fa-snowflake"></i>
+                                </div>
+                            </div>
+                            <div class="text px-5">
+                                <p>
+                                    Задача нахождения точного значения определенного интеграла не всегда имеет решение.
+                                    Действительно, первообразную подынтегральной функции во многих случаях не удается
+                                    представить в виде элементарной функции. Есть методы численного
+                                    интегрирования, позволяющие получить значение определенного интеграла с требуемой
+                                    степенью точности. Одним из таких методов является метод Симпсона (его еще называют
+                                    методом парабол).
+                                    <br>
+                                    Пусть функция y = f(x) непрерывна на отрезке [a; b] и нам требуется вычислить
+                                    определенный интеграл <img src="001.png" alt="">.
+
+                                    Разобьем отрезок [a; b] на n элементарных отрезков <img src="002.png" alt=""> длины
+                                    <img src="003.png" alt=""> точками
+                                    <img src="004.png" alt="">. Пусть точки <img src="005.png" alt=""> являются
+                                    серединами отрезков <img src="002 (1).png" alt=""> соответственно. В
+                                    этом случае все "узлы" определяются из равенства <img src="006.png" alt="">.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="sut">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-lg-12">
+                            <div class="title text-center mx-5 my-3">
+                                <h3>
+                                    Суть метода Симпсона.
+                                </h3>
+                                <div class="icon">
+                                    <i class="far fa-snowflake"></i>
+                                </div>
+                            </div>
+                            <div class="text px-5">
+                                <p>
+                                    На каждом интервале <img src="002 (1).png" alt=""> подынтегральная функция
+                                    приближается
+                                    квадратичной параболой
+                                    <img src="007.png" alt="">, проходящей через точки <img src="008.png" alt="">.
+                                    Отсюда и
+                                    название метода - метод парабол.
+                                    Это делается для того, чтобы в качестве приближенного значения определенного
+                                    интеграла
+                                    <img src="009.png" alt=""> взять <img src="010.png" alt="">, который мы можем
+                                    вычислить по
+                                    формуле Ньютона-Лейбница. В этом и
+                                    заключается суть метода парабол.
+                                    Геометрически это выглядит так:
+                                    <img src="pict001.png" alt="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="formulaSimp">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-lg-12">
+                            <div class="title text-center mx-5 my-3">
+                                <h3>
+                                    Формула метода Симпсона.
+                                </h3>
+                                <div class="icon">
+                                    <i class="far fa-snowflake"></i>
+                                </div>
+                            </div>
+                            <div class="text px-5">
+                                <p>
+                                    Формула метода Симпсона (парабол) имеет вид:
+                                </p>
+                                <img src="020.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="poqrew">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-lg-12">
+                            <div class="title text-center mx-5 my-3">
+                                <h3>
+                                    Абсолютная погрешность Симпсона.
+                                </h3>
+                                <div class="icon">
+                                    <i class="far fa-snowflake"></i>
+                                </div>
+                            </div>
+                            <div class="text px-5">
+                                <p>
+                                    Абсолютная погрешность метода Симпсона оценивается как
+                                </p>
+                                <img src="021.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="primeri">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-lg-12">
+                            <div class="title text-center mx-5 my-3">
+                                <h3>
+                                    Примеры приближенного вычисления определенных интегралов методом Симпсона.
+                                </h3>
+                                <div class="icon">
+                                    <i class="far fa-snowflake"></i>
+                                </div>
+                            </div>
+                            <div class="text px-5">
+                                <p>
+                                    Разберем применение метода Симпсона (парабол) при приближенном вычислении
+                                    определенных интегралов.
+                                    <br>
+                                    Обычно встречается два типа заданий:
+                                    <br>
+                                    В первом случае требуется приближенно вычислить определенный интеграл по формуле
+                                    Симпсона для заданного n.
+                                    <br>
+                                    Во втором случае просят найти приближенное значение определенного интеграла методом
+                                    Симпсона (парабол) с точностью формула (к примеру, с точностью до одной тысячной).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="calculator">
+            <div class="container px-5">
+                <div class="row px-5">
+                    <div class="col-lg-12">
+                        <div class="title mx-5 my-3">
+                            <h3>
+                                Вычисление.
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group mt-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">f(x)</span>
+                            </div>
+                            <input name="function" type="text" class="form-control" placeholder="x/(x^4+1)"
+                                aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="input-group mt-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">a</span>
+                            </div>
+                            <input name="firstInterval" type="number" class="form-control" placeholder="0"
+                                aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="input-group mt-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">b</span>
+                            </div>
+                            <input name="secondInterval" type="number" class="form-control" placeholder="0"
+                                aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="input-group mt-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">n</span>
+                            </div>
+                            <input name="iteration" type="number" class="form-control" placeholder="0" aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3 px-5">
+                    <div class="col-lg-6">
+                        <div class="h">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 px-5">
+                    <button id="calc" type="button" class="btn btn-primary btn-lg btn-block">Click for Calculate</button>
+                </div>
+                <div class="row px-5">
+                    <div class="col-lg-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>i</th>
+                                    <th>x[i]</th>
+                                    <th>f(x[i])</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/file.js"></script>
+</body>
+
+</html>

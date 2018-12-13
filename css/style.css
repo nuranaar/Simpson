@@ -1,0 +1,50 @@
+* {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+* p, * h3 {
+  color: #444444;
+}
+
+header .navbar {
+  background-color: #489eed;
+  height: 110px;
+}
+
+header .navbar img {
+  border-radius: 100%;
+  position: fixed;
+  left: 2px;
+  top: 0;
+  width: 12%;
+  z-index: 5;
+}
+
+header .navbar .navbar-brand {
+  margin-left: 100px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.title h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+#calculator .h p {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+footer {
+  background-color: #489eed;
+  height: 100px;
+}
+
+.icon {
+  position: relative;
+  color: #489eed;
+  font-size: 28px;
+}
+/*# sourceMappingURL=style.css.map */
